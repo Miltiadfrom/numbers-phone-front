@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const phonesApi = createApi({
     reducerPath: "phonesApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://127.0.0.1:5000",
+        baseUrl: "http://127.0.0.1:8000",
     }),
     endpoints: (builder) => ({
         getPhonesBySubId: builder.query({
@@ -31,6 +31,7 @@ export const phonesApi = createApi({
 export const {
     useDeletePhoneMutation,
     useGetPhonesBySubIdQuery,
+    useSavePhoneMutation
 } = phonesApi;
 
 
