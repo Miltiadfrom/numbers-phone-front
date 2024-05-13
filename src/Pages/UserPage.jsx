@@ -7,6 +7,7 @@ export const UserPage = () => {
     const { data, isLoading, isError } = useGetUserByIdQuery(user_id)
     const { data: phonesData, isLoading: loadingPhone, isError: errorPhone } = useGetPhonesBySubIdQuery(user_id)
     const [deletePhone, {isLoading: loadingDelPhone, isError: errorDelPhone, data: phoneData}] = useDeletePhoneMutation()
+    // const {data: paymentsData, isLoading: loadingPayments, isError: errorPayments}
 
 
     return (<div>
